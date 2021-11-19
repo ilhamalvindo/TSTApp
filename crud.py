@@ -7,7 +7,7 @@ jumlahOrang = 0
 
 def add_data_pembayaran(db: Session, pembayaran : schemas.pembayaran):
     new_dataPembayaran = models.pembayaran(idBayar = pembayaran.idBayar, tanggal = pembayaran.tanggal, 
-                                        MetodePembayaran = pembayaran.MetodePembayaran, TotalHarga = pembayaran.TotalHarga,
+                                        metodePembayaran = pembayaran.metodePembayaran, totalHarga = pembayaran.totalHarga,
                                         idPesanan = pembayaran.idPesanan)
     db.add(new_dataPembayaran)
     db.commit()
@@ -16,7 +16,7 @@ def add_data_pembayaran(db: Session, pembayaran : schemas.pembayaran):
 
 
 def add_data_pesanan(db: Session, pesanan : schemas.pembayaran):
-    new_dataPesanan = models.pesanan(idPelanggan = pesanan.idPelanggan, idCabang = pesanan.idCabang, totalHarga = pesanan.TotalHarga,
+    new_dataPesanan = models.pesanan(idPelanggan = pesanan.idPelanggan, idCabang = pesanan.idCabang, totalHarga = pesanan.totalHarga,
                                     idPesanan = pesanan.idPesanan, tanggal = pesanan.tanggal)
     db.add(new_dataPesanan)
     db.commit()

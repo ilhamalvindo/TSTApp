@@ -6,8 +6,8 @@ from pydantic import BaseModel
 class pembayaran(BaseModel):
     idBayar : str
     tanggal : str
-    MetodePembayaran : str
-    TotalHarga : int
+    metodePembayaran : str
+    totalHarga : int
     idPesanan : str
     idPelanggan : str
     idCabang : str

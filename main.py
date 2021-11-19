@@ -25,14 +25,14 @@ def get_db():
 #Input Data Pemasukan pada saat pembayaran menu makanan
 @app.post("/postDataPembayaran/")
 async def input_data_pembayaran(pembayaran : schemas.pembayaran, db: Session = Depends(get_db)):
-    try:
-        addDataPesanan = crud.add_data_pesanan(db, pembayaran)
-        addDataPembayaran = crud.add_data_pembayaran(db, pembayaran)
-        if (addDataPembayaran == None):
-            return "Adding data to database error!"
-        return addDataPembayaran
-    except: 
-        return "Error adding to database, data already exist. idPesanan, idPelanggan, and idBayar should be unique"
+    # try:
+    addDataPesanan = crud.add_data_pesanan(db, pembayaran)
+    addDataPembayaran = crud.add_data_pembayaran(db, pembayaran)
+    if (addDataPembayaran == None):
+        return "Adding data to database error!"
+    return addDataPembayaran
+    # except: 
+    #     return "Error adding to database, data already exist. idPesanan, idPelanggan, and idBayar should be unique"
 
 @app.post("/homepage")
 async def get_homepage():
