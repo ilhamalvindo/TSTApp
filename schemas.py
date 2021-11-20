@@ -4,13 +4,13 @@ from pydantic import BaseModel
 
 
 class pembayaran(BaseModel):
-    idBayar : str
+    idBayar : int
     tanggal : str
     metodePembayaran : str
     totalHarga : int
-    idPesanan : str
-    idPelanggan : str
-    idCabang : str
+    idPesanan : int
+    idPelanggan : int
+    idCabang : int
 
 
 # class pesanan(BaseModel):
