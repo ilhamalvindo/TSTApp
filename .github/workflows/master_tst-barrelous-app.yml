@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'tst-barrelous-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9079F8B966CF44FCA91457C6F480CB33 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C4612063FFEB4ED0B63C185EB58EFBBA }}
